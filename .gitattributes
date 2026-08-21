@@ -1,0 +1,10 @@
+# Normalise text to LF in the repository so the project is identical on Linux,
+# macOS, Colab, and Streamlit Cloud.
+* text=auto eol=lf
+
+# Binary artifacts: never touch these.
+*.joblib binary
+*.png    binary
+
+# Keep the executed notebook diffable as text but do not try to merge it.
+*.ipynb  text merge=binary

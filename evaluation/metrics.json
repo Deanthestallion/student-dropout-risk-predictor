@@ -1,0 +1,163 @@
+{
+  "dataset": {
+    "source": "UCI Student Performance (Cortez & Silva 2008), Portuguese-language cohort",
+    "url": "https://archive.ics.uci.edu/dataset/320/student+performance",
+    "students": 649,
+    "raw_features": 31,
+    "encoded_features": 40,
+    "at_risk_count": 100,
+    "at_risk_rate": 0.15408320493066255
+  },
+  "target": {
+    "definition": "at_risk = 1 if G3 < 10 of 20",
+    "nature": "proxy label for end-of-year academic failure, not observed dropout",
+    "excluded_for_leakage": [
+      "G3",
+      "G2"
+    ]
+  },
+  "split": {
+    "train": 519,
+    "test": 130,
+    "train_at_risk": 80,
+    "test_at_risk": 20
+  },
+  "best_model": "RandomForest",
+  "selection_rule": "highest cross-validated PR-AUC on the training folds",
+  "tuned_threshold": 0.41999999999999993,
+  "threshold_rule": "highest precision among thresholds reaching recall >= 0.85",
+  "risk_bands": {
+    "low_max": 0.33,
+    "medium_max": 0.66
+  },
+  "metrics_default_threshold": {
+    "accuracy": 0.8692307692307693,
+    "precision": 0.56,
+    "recall": 0.7,
+    "f1": 0.6222222222222222,
+    "roc_auc": 0.8904545454545455,
+    "pr_auc": 0.580578231136435,
+    "tn": 99.0,
+    "fp": 11.0,
+    "fn": 6.0,
+    "tp": 14.0
+  },
+  "metrics_tuned_threshold": {
+    "accuracy": 0.8769230769230769,
+    "precision": 0.5666666666666667,
+    "recall": 0.85,
+    "f1": 0.68,
+    "roc_auc": 0.8904545454545455,
+    "pr_auc": 0.580578231136435,
+    "tn": 97.0,
+    "fp": 13.0,
+    "fn": 3.0,
+    "tp": 17.0
+  },
+  "all_models": {
+    "RandomForest": {
+      "cv_accuracy": 0.9153,
+      "cv_precision": 0.7494,
+      "cv_recall": 0.7,
+      "cv_f1": 0.7158,
+      "cv_roc_auc": 0.9467,
+      "cv_pr_auc": 0.7532,
+      "test_accuracy": 0.8692,
+      "test_precision": 0.56,
+      "test_recall": 0.7,
+      "test_f1": 0.6222,
+      "test_roc_auc": 0.8905,
+      "test_pr_auc": 0.5806,
+      "tn": 99,
+      "fp": 11,
+      "fn": 6,
+      "tp": 14
+    },
+    "GradientBoosting": {
+      "cv_accuracy": 0.8999,
+      "cv_precision": 0.6832,
+      "cv_recall": 0.6625,
+      "cv_f1": 0.6629,
+      "cv_roc_auc": 0.9379,
+      "cv_pr_auc": 0.7277,
+      "test_accuracy": 0.8769,
+      "test_precision": 0.5909,
+      "test_recall": 0.65,
+      "test_f1": 0.619,
+      "test_roc_auc": 0.8855,
+      "test_pr_auc": 0.5159,
+      "tn": 101,
+      "fp": 9,
+      "fn": 7,
+      "tp": 13
+    },
+    "LogisticRegression": {
+      "cv_accuracy": 0.869,
+      "cv_precision": 0.5675,
+      "cv_recall": 0.7,
+      "cv_f1": 0.6244,
+      "cv_roc_auc": 0.9219,
+      "cv_pr_auc": 0.6764,
+      "test_accuracy": 0.8538,
+      "test_precision": 0.5152,
+      "test_recall": 0.85,
+      "test_f1": 0.6415,
+      "test_roc_auc": 0.8914,
+      "test_pr_auc": 0.6058,
+      "tn": 94,
+      "fp": 16,
+      "fn": 3,
+      "tp": 17
+    },
+    "DecisionTree": {
+      "cv_accuracy": 0.8979,
+      "cv_precision": 0.6731,
+      "cv_recall": 0.675,
+      "cv_f1": 0.6684,
+      "cv_roc_auc": 0.8916,
+      "cv_pr_auc": 0.6296,
+      "test_accuracy": 0.8769,
+      "test_precision": 0.5667,
+      "test_recall": 0.85,
+      "test_f1": 0.68,
+      "test_roc_auc": 0.8766,
+      "test_pr_auc": 0.5561,
+      "tn": 97,
+      "fp": 13,
+      "fn": 3,
+      "tp": 17
+    }
+  },
+  "top_permutation_features": {
+    "G1": 0.28719,
+    "higher": 0.03577,
+    "activities": 0.03144,
+    "school": 0.02928,
+    "age": 0.01444,
+    "traveltime": 0.0138,
+    "Walc": 0.01204,
+    "freetime": 0.01085,
+    "Dalc": 0.01035,
+    "guardian": 0.00982
+  },
+  "risk_band_summary": {
+    "Low": {
+      "students": 92,
+      "actually_at_risk": 3,
+      "share_of_cohort": 70.8,
+      "precision_within_band": 0.033
+    },
+    "Medium": {
+      "students": 32,
+      "actually_at_risk": 13,
+      "share_of_cohort": 24.6,
+      "precision_within_band": 0.406
+    },
+    "High": {
+      "students": 6,
+      "actually_at_risk": 4,
+      "share_of_cohort": 4.6,
+      "precision_within_band": 0.667
+    }
+  }
+}

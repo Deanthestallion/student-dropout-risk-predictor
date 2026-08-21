@@ -1,0 +1,27 @@
+# Student Dropout Risk Predictor - pinned to the versions the results were produced with.
+# Verified on Python 3.13.7 (Windows). Python 3.10 or newer is required.
+
+# Core data and modelling
+pandas==3.0.3
+numpy==2.4.6
+scikit-learn==1.9.0
+scipy==1.18.0
+imbalanced-learn==0.14.2
+joblib==1.5.3
+
+# Explainability
+shap==0.52.0
+numba==0.67.0
+cloudpickle==3.1.2
+slicer==0.0.8
+
+# Plotting
+matplotlib==3.11.0
+seaborn==0.13.2
+
+# App
+streamlit==1.59.0
+
+# Notebook execution (only needed to re-run notebook.ipynb locally)
+nbformat==5.10.4
+jupyter==1.1.1

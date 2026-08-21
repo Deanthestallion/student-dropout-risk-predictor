@@ -1,0 +1,5 @@
+model,cv_accuracy,cv_precision,cv_recall,cv_f1,cv_roc_auc,cv_pr_auc,test_accuracy,test_precision,test_recall,test_f1,test_roc_auc,test_pr_auc,tn,fp,fn,tp
+RandomForest,0.9153,0.7494,0.7,0.7158,0.9467,0.7532,0.8692,0.56,0.7,0.6222,0.8905,0.5806,99,11,6,14
+GradientBoosting,0.8999,0.6832,0.6625,0.6629,0.9379,0.7277,0.8769,0.5909,0.65,0.619,0.8855,0.5159,101,9,7,13
+LogisticRegression,0.869,0.5675,0.7,0.6244,0.9219,0.6764,0.8538,0.5152,0.85,0.6415,0.8914,0.6058,94,16,3,17
+DecisionTree,0.8979,0.6731,0.675,0.6684,0.8916,0.6296,0.8769,0.5667,0.85,0.68,0.8766,0.5561,97,13,3,17

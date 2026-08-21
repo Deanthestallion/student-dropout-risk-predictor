@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.env
+.DS_Store
+Thumbs.db
+.streamlit/secrets.toml
+*.log
+
+# Scratch space. The committed artifacts live in models/ and evaluation/.
+scripts/_*.py
+
+# Superseded local backup of the app's first UI version, kept out of the repo.
+scripts/app_v1_backup.py

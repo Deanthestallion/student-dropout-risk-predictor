@@ -1,0 +1,13 @@
+# Fixed light theme so the demo looks identical on any machine.
+[theme]
+base = "light"
+primaryColor = "#0F766E"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F1F5F9"
+textColor = "#0F172A"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
